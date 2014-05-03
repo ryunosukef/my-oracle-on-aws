@@ -1,5 +1,5 @@
 {
-  "name": "hello-world-bespoke",
+  "name": "oracle-on-aws",
   "version": "0.0.0",
   "dependencies": {
     "bespoke.js": "~0.4.0",
