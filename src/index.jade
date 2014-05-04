@@ -3,7 +3,7 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title わたしと現場 
+    title oracleと戯れてみようじゃないか 
 
     // build:css styles/styles.css
     //- Check out 'src/bower_components/prism/themes/' for available themes
@@ -16,80 +16,122 @@ html
     article
 
       section
-        h1 わたしと現場 
+        h1 oracle
+        h2 と戯れてみようじゃないか 
 
       section
-        h2 わたしの現場
+        h2 今日のおまじない 
+        code.language-bash.bullet.
+          $ git clone https://gits_fujimoto@bitbucket.org/gits_fujimoto/jpt-chef.git  
+          $ cd jpt-chef
+          $ sh cook-oracle  
+
+      section
+        h1 DBA 
+
+      section
+        h2 DBAがやりたいこと 
         ul 
           li 
-          li 2013: aaaのインフラ更改 
-          li 2014: xxxのシステム更改
+          li oracleの動作検証 
+          li schemaの変更管理 
 
       section
-        h2 衝撃の現場
+        h1 とにかくoralce使える環境がほしい
+
+      section
+        h1 oracle on AWS 
+
+      section
+        h1 EC2 | RDS 
+        h3 <a href="http://www.slideshare.net/InsightTechnology/a31-oracle-yoshida">AWS上でOracleを利用するためのはじめの一歩</a> 
+
+      section
+        h2 EC2
         ul
           li 
-          li Windows大好きな構成管理
-          li Excel大好きな課題管理 
-          li みんなでリリース管理
+          li <a href="https://aws.amazon.com/jp/ec2/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ec2-free-price" height="300" /></a>
+          li oracleのインストールが必要 
+          li sshして、sqlplusが使える 
 
       section
-        h2 Windows大好きな構成管理
+        h2 EC2
         ul
           li 
-          li 最新のファイルはどれですか？ 
-          li 昨日、保存したファイルが見当たらない.. 
-          li フォルダ構成がいつのまにか変更されている 
-          li 実は、誰かの過去のメールに添付されている 
+          li <a href="https://aws.amazon.com/jp/ec2/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ec2-ondemand-price-rhel" height="300" /></a>
 
       section
-        h2 Excel大好きな課題管理 
-        hr
-        pre
-          code.language-javascript.
-            aaa課題.xls 
-            aaa課題-20140115.xls 
-            aaa課題-20140115.xls(1) 
-            aaa課題-20140116.xls 
-            bbb課題.xls 
-
-      section
-        h2 みんなでリリース管理
+        h2 RDS
         ul
           li 
-          li みんなroot権限
-          li みんなデプロイ可能
-          li みんな設定変更可能
+          li <a href="https://aws.amazon.com/jp/rds/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/rds-ondemand-price-single" height="300" /></a>
+          li oracleのインストールが不要（パラメータを選択するだけ） 
+          li sshできない、sqlplusが使えない 
 
       section
-        h2 いまのサーバの状態は、
-
-      section
-        h2 衝撃の現場
+        h2 setup oracle on EC2 
         ul
           li 
-          li どのソースが適用されている？ 
-          li どの課題に対応できている？
-          li いま、だれか操作してる？
+          li <a href="http://tachesimazzoca.blogspot.jp/2013/01/3000001.html">oracle-xe 11gをインストール</a>
+          li ti.microを使う場合の注意点
 
       section
-        h2 このままじゃ、まずいよね... 
+        h1 私も使いたいと　いわれたら？ 
 
       section
-        h2 2013.03
-        ul
-          li 
-          li <a href="http://tatsu-zine.com/books/chef-solo"><img alt="入門Chef Solo - Infrastructure as Code" src="http://tatsu-zine.com/images/books/78/cover_l.jpg" height="300" /></a>
-          li これだ！ 
+        h1 URL教えるから自分でやってみ 
 
       section
-        h2 これからの現場
-        ul
-          li 
-          li エンジニアの成果物は、CodeとしてGitに構成管理されている
-          li 課題は、ITS/BTSに起票され、課題への対応がGitと紐づいている
-          li root権限と一般ユーザ権限を区別し、アクセス制御できている 
-          li git pushからデプロイまでの操作手順を自動化(CI/CD)している 
+        h1.bullet さくっとoracleを料理しましょ
+
+      section
+        h2 setup oracle on EC2
+        code.language-bash.bullet.
+          $ git clone https://gits_fujimoto@bitbucket.org/gits_fujimoto/jpt-chef.git  
+          $ cd jpt-chef
+          $ sh cook-oracle  
+
+      section
+        h2 bitbucket 
+        <a href=""><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/bitbucket" width="100%" /></a>
+
+      section
+        h2 vagrant 
+        <a href="http://www.vagrantup.com"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/vagrant" width="100%" /></a>
+
+      section
+        h2 chef 
+        <a href="http://www.getchef.com/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/chef" width="100%" /></a>
+
+      section
+        h2 serverspec 
+        <a href="http://serverspec.org/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/serverspec" width="100%" /></a>
+
+      section
+        h2 wercker
+        <a href="http://wercker.com/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/wercker" width="100%" /></a>
+
+      section
+        h2 hipchat 
+        <a href=""><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/hipchat" width="100%" /></a>
+
+      section
+        h1 Architecture 
+
+      section
+        h2 code on MAC(Git)
+
+      section
+        h2 push to bitbucket(Git)
+
+      section
+        h2 notify (bitbucket -> hipchat)
+
+      section
+        h2 CI on wercker
+
+      section
+        h2 notify (wercker -> hipchat)
 
       section
         h1 Thank you.
