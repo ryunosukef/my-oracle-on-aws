@@ -34,7 +34,7 @@ html
         ul 
           li 
           li oracleの動作検証 
-          li schemaの変更管理 
+          li schemaの変更管理
 
       section
         h1 とにかくoralce使える環境がほしい
@@ -116,31 +116,119 @@ html
         <a href=""><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/hipchat" width="100%" /></a>
 
       section
-        h1 Architecture 
+        h1 CI Process
 
       section
-        h2 build environmnet on MAC
+        h2 CI Process
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_00.jpg"><img alt="ci_process_00.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_00.jpg" width="50%" /></a>
 
       section
-        h2 code on MAC(Git)
+        h2 build environmnet on Mac
+        h3 [ruby, vagrant]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_01.jpg"><img alt="ci_process_01.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_01.jpg" width="50%" /></a>
 
       section
-        h2 push to bitbucket(Git)
+        h2 build environmnet on Mac
+        h3 [ruby(bundler), vagrant]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_02.jpg"><img alt="ci_process_02.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_02.jpg" width="50%" /></a>
 
       section
-        h2 notify (bitbucket -> hipchat)
+        h2 build environmnet on Mac
+        h3 [ruby(bundler,gems), vagrant]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_03.jpg"><img alt="ci_process_03.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_03.jpg" width="50%" /></a>
+
+      section
+        h2 build environmnet on Mac
+        h3 [ruby(bundler,gems), vagrant(plugins)]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_05.jpg"><img alt="ci_process_05.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_05.jpg" width="50%" /></a>
+
+      section
+        h2 code on Mac
+        h3 [cookbooks/, site-cookbooks/, spec/]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_06.jpg"><img alt="ci_process_06.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_06.jpg" width="50%" /></a>
+
+      section
+        h2 rake aws:up
+        h3 (vagrant up --provider=aws)
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_11.jpg"><img alt="ci_process_11.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_11.jpg" width="50%" /></a>
+
+      section
+        h2 rake aws:provision
+        h3 (vagrant provision)
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_12.jpg"><img alt="ci_process_12.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_12.jpg" width="50%" /></a>
+
+      section
+        h2 rake aws:spec
+        h3 (rspec spec/*)
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_13.jpg"><img alt="ci_process_13.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_13.jpg" width="50%" /></a>
+
+      section
+        h2 rake aws:ssh
+        h3 (vagrant ssh)
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_14.jpg"><img alt="ci_process_14.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_14.jpg" width="50%" /></a>
+
+      section
+        h2 rake aws:destroy
+        h3 (vagrant destroy)
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_15.jpg"><img alt="ci_process_15.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_15.jpg" width="50%" /></a>
+
+      section
+        h2 git push
+        h3 [code to bitbucket]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_21.jpg"><img alt="ci_process_21.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_21.jpg" width="50%" /></a>
+
+      section
+        h2 hook & notify
+        h3 [bitbucket -> hipchat -> Mac]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_23.jpg"><img alt="ci_process_23.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_23.jpg" width="50%" /></a>
 
       section
         h2 CI on wercker
+        h3 [hook & git clone & get wercker.yml]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_31.jpg"><img alt="ci_process_31.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_31.jpg" width="50%" /></a>
 
       section
-        h2 notify (wercker -> hipchat)
+        h2 CI on wercker
+        h3 [build:steps setup]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_32.jpg"><img alt="ci_process_32.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_32.jpg" width="50%" /></a>
 
       section
-        h2 chef 
+        h2 CI on wercker
+        h3 [build:steps rake aws:up]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_33.jpg"><img alt="ci_process_33.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_33.jpg" width="50%" /></a>
 
       section
-        h2 serverspec
+        h2 CI on wercker
+        h3 [build:steps rake aws:provision, spec, destroy]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_34.jpg"><img alt="ci_process_34.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_34.jpg" width="50%" /></a>
+
+      section
+        h2 notify
+        h3 [wercker -> hipchat -> Mac]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_35.jpg"><img alt="ci_process_35.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_35.jpg" width="50%" /></a>
+
+
+      section
+        h2 rake (--Rakefile)
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_41.jpg"><img alt="ci_process_41.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_41.jpg" width="50%" /></a>
+
+      section
+        h2 bundle (--Gemfile)
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_42.jpg"><img alt="ci_process_42.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_42.jpg" width="50%" /></a>
+
+      section
+        h2 vagrant (--Vagrantfile)
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_43.jpg"><img alt="ci_process_43.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_43.jpg" width="50%" /></a>
+
+      section
+        h2 chef (cookbooks/ --Berksfile)
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_44.jpg"><img alt="ci_process_44.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_44.jpg" width="50%" /></a>
+
+      section
+        h2 chef (site-cookbooks/)
+
+      section
+        h2 serverspec (rspec spec/*)
 
       section
         h1 Thank you.
