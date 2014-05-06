@@ -18,6 +18,9 @@ html
       section
         h1 oracle
         h2 と戯れてみようじゃないか 
+        h3 
+        h3 2014.05.09 Fri. 
+        h3 R.Fujimoto 
 
       section
         h2 今日のおまじない 
@@ -37,7 +40,10 @@ html
           li schemaの変更管理
 
       section
-        h1 とにかくoralce使える環境がほしい
+        h1 とにかくoracle使える環境がほしい
+
+      section
+        h1 30分以内で!!! 
 
       section
         h1 oracle on AWS 
@@ -49,36 +55,34 @@ html
       section
         h2 EC2
         ul
-          li 
           li oracleのインストールが必要 
           li sshして、sqlplusが使える 
+          li expdp/impdp を実行できる 
           li <a href="https://aws.amazon.com/jp/ec2/pricing">無料利用枠</a>
           li Tokyo Region, m3.medium: $0.161/h 
 
       section
         h2 EC2
         ul
-          li 
           li <a href="https://aws.amazon.com/jp/ec2/pricing"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ec2-free-price" height="300" /></a>
 
       section
         h2 EC2
         ul
-          li 
           li <a href="https://aws.amazon.com/jp/ec2/pricing"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ec2-ondemand-price-rhel" height="300" /></a>
 
       section
         h2 RDS
         ul
-          li 
           li oracleのインストールが不要（パラメータを選択するだけ） 
-          li sshできない、sqlplusが使えない 
+          li sshできない、(sqlplusが使えない) 
+          li expdp/impdp を実行できない 
+          li 無料利用枠なし 
           li Tokyo Region, db.m3.medium: $0.245/h 
 
       section
         h2 RDS
         ul
-          li 
           li <a href="https://aws.amazon.com/jp/rds/pricing"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/rds-ondemand-price-single" height="300" /></a>
 
       section
@@ -89,13 +93,16 @@ html
           li ti.microを使う場合の注意点
 
       section
+        <a href="http://tachesimazzoca.blogspot.jp/2013/01/3000001.html"><img src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/oracle-xe_setup.png" height="400" /></a>
+
+      section
         h1 私も使いたいと　いわれたら？ 
 
       section
-        h1 URL教えるから自分でやってみ 
+        h1 URL教えるから　自分でやってみ 
 
       section
-        h1 さくっとoracleを料理しましょ
+        h1 20分で　oracleを料理してみ
 
       section
         h2 setup oracle on EC2
@@ -121,10 +128,9 @@ html
           li <img alt="chef_spec_process.png" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/chef_spec_process.png" width="100%" />
 
       section
-        h2 Continuas Integration 
+        h2 Continuous Integration 
         ul
           li <img alt="chef_spec_process.png" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/chef_spec_process.png" width="100%" />
-
 
       section
         h2 Infrastructure as Code 
@@ -150,13 +156,13 @@ html
 
       section
         h2 build environmnet on Mac
-        h3 [ruby(bundler,gems), vagrant]
-        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_03.jpg"><img alt="ci_process_03.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_03.jpg" width="50%" /></a>
+        h3 [ruby(bundler), vagrant]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/rubygems_bundler.png"><img alt="rubygems_bundler.png" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/rubygems_bundler.png" width="100%" /></a>
 
       section
         h2 build environmnet on Mac
-        h3 [ruby(bundler,gems), vagrant(plugins)]
-        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_05.jpg"><img alt="ci_process_05.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_05.jpg" width="50%" /></a>
+        h3 [ruby(bundler,gems), vagrant]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_03.jpg"><img alt="ci_process_03.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_03.jpg" width="50%" /></a>
 
       section
         h2 chef 
@@ -165,6 +171,16 @@ html
       section
         h2 serverspec 
         <a href="http://serverspec.org/"><img alt="serverspec" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/serverspec" width="100%" /></a>
+
+      section
+        h2 build environmnet on Mac
+        h3 [ruby(bundler,gems), vagrant(plugins)]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_05.jpg"><img alt="ci_process_05.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_05.jpg" width="50%" /></a>
+
+      section
+        h2 build environmnet on Mac
+        h3 [ruby(bundler,gems), vagrant(plugins)]
+        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/vagrant_aws_plugin.png"><img alt="vagrant_aws_plugin.png" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/vagrant_aws_plugin.png" width="70%" /></a>
 
       section
         h2 code on Mac
@@ -245,6 +261,18 @@ html
 
 
       section
+        h2 To be Growth Hacker
+        h3 「レシピを作って、調理したら、味見をする」
+        p ( codeを書いて、buildしたら、testする )
+        h3  
+        h3 というCI Processをwerckerで自動化し、
+        h3 Gitリポジトリを共有するチームメンバーと
+        h3 hipchatで情報共有を進化させよう
+
+      section
+        h1 Thank you.
+
+      section
         h2 rake (--Rakefile)
         <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_41.jpg"><img alt="ci_process_41.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_41.jpg" width="50%" /></a>
 
@@ -265,17 +293,6 @@ html
 
       section
         h2 serverspec (rspec spec/*)
-
-      section
-        h2 To be Growth Hacker
-        h3 「レシピを作って、調理したら、味見をする」
-        p (「codeを書いて、buildしたら、testする」)
-        h3 というCI Processをwerckerで自動化し、
-        h3 Gitリポジトリを共有するチームメンバーと
-        h3 hipchatで情報共有を進化させよう
-
-      section
-        h1 Thank you.
 
       section
         h1 bespsoke.js
