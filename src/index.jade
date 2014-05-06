@@ -22,8 +22,8 @@ html
       section
         h2 今日のおまじない 
         code.language-bash.bullet.
-          $ git clone https://gits_fujimoto@bitbucket.org/gits_fujimoto/jpt-chef.git  
-          $ cd jpt-chef
+          $ git clone git@bitbucket.org:gits_fujimoto/oracle-chef-spec.git 
+          $ cd oracle-chef-spec
           $ sh cook-oracle  
 
       section
@@ -50,23 +50,36 @@ html
         h2 EC2
         ul
           li 
-          li <a href="https://aws.amazon.com/jp/ec2/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ec2-free-price" height="300" /></a>
           li oracleのインストールが必要 
           li sshして、sqlplusが使える 
+          li <a href="https://aws.amazon.com/jp/ec2/pricing">無料利用枠</a>
+          li Tokyo Region, m3.medium: $0.161/h 
 
       section
         h2 EC2
         ul
           li 
-          li <a href="https://aws.amazon.com/jp/ec2/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ec2-ondemand-price-rhel" height="300" /></a>
+          li <a href="https://aws.amazon.com/jp/ec2/pricing"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ec2-free-price" height="300" /></a>
+
+      section
+        h2 EC2
+        ul
+          li 
+          li <a href="https://aws.amazon.com/jp/ec2/pricing"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ec2-ondemand-price-rhel" height="300" /></a>
 
       section
         h2 RDS
         ul
           li 
-          li <a href="https://aws.amazon.com/jp/rds/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/rds-ondemand-price-single" height="300" /></a>
           li oracleのインストールが不要（パラメータを選択するだけ） 
           li sshできない、sqlplusが使えない 
+          li Tokyo Region, db.m3.medium: $0.245/h 
+
+      section
+        h2 RDS
+        ul
+          li 
+          li <a href="https://aws.amazon.com/jp/rds/pricing"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/rds-ondemand-price-single" height="300" /></a>
 
       section
         h2 setup oracle on EC2 
@@ -82,50 +95,53 @@ html
         h1 URL教えるから自分でやってみ 
 
       section
-        h1.bullet さくっとoracleを料理しましょ
+        h1 さくっとoracleを料理しましょ
 
       section
         h2 setup oracle on EC2
         code.language-bash.bullet.
-          $ git clone https://gits_fujimoto@bitbucket.org/gits_fujimoto/jpt-chef.git  
-          $ cd jpt-chef
+          $ git clone git@bitbucket.org:gits_fujimoto/oracle-chef-spec.git 
+          $ cd oracle-chef-spec
           $ sh cook-oracle  
 
       section
-        h2 bitbucket 
-        <a href=""><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/bitbucket" width="100%" /></a>
+        h2 <a href="https://bitbucket.org/gits_fujimoto/oracle-chef-spec">oracle-chef-spec.git</a> 
 
       section
-        h2 vagrant 
-        <a href="http://www.vagrantup.com"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/vagrant" width="100%" /></a>
+        h2 oracleを料理するには？
+        ul
+          li 
+          li レシピを作る
+          li 調理する 
+          li 味見をする
 
       section
-        h2 chef 
-        <a href="http://www.getchef.com/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/chef" width="100%" /></a>
+        h2 oracleを料理するには？
+        ul
+          li <img alt="chef_spec_process.png" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/chef_spec_process.png" width="100%" />
 
       section
-        h2 serverspec 
-        <a href="http://serverspec.org/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/serverspec" width="100%" /></a>
+        h2 Continuas Integration 
+        ul
+          li <img alt="chef_spec_process.png" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/chef_spec_process.png" width="100%" />
+
 
       section
-        h2 wercker
-        <a href="http://wercker.com/"><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/wercker" width="100%" /></a>
-
-      section
-        h2 hipchat 
-        <a href=""><img alt="" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/hipchat" width="100%" /></a>
+        h2 Infrastructure as Code 
+        ul
+          li <img alt="chef_spec_process_code.png" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/chef_spec_process_code.png" width="100%" />
 
       section
         h1 CI Process
 
       section
         h2 CI Process
-        <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_00.jpg"><img alt="ci_process_00.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_00.jpg" width="50%" /></a>
-
-      section
-        h2 build environmnet on Mac
         h3 [ruby, vagrant]
         <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_01.jpg"><img alt="ci_process_01.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_01.jpg" width="50%" /></a>
+
+      section
+        h2 vagrant 
+        <a href="http://www.vagrantup.com"><img alt="vagrant" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/vagrant" width="100%" /></a>
 
       section
         h2 build environmnet on Mac
@@ -141,6 +157,14 @@ html
         h2 build environmnet on Mac
         h3 [ruby(bundler,gems), vagrant(plugins)]
         <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_05.jpg"><img alt="ci_process_05.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_05.jpg" width="50%" /></a>
+
+      section
+        h2 chef 
+        <a href="http://www.getchef.com/"><img alt="chef" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/chef" width="100%" /></a>
+
+      section
+        h2 serverspec 
+        <a href="http://serverspec.org/"><img alt="serverspec" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/serverspec" width="100%" /></a>
 
       section
         h2 code on Mac
@@ -178,14 +202,26 @@ html
         <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_21.jpg"><img alt="ci_process_21.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_21.jpg" width="50%" /></a>
 
       section
+        h2 bitbucket 
+        <a href="http://bitbucket.org"><img alt="bitbucket" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/bitbucket" width="100%" /></a>
+
+      section
         h2 hook & notify
         h3 [bitbucket -> hipchat -> Mac]
         <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_23.jpg"><img alt="ci_process_23.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_23.jpg" width="50%" /></a>
 
       section
+        h2 hipchat 
+        <a href="https://www.atlassian.com/ja/software/hipchat/"><img alt="hipchat" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/hipchat" width="100%" /></a>
+
+      section
         h2 CI on wercker
         h3 [hook & git clone & get wercker.yml]
         <a href="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_31.jpg"><img alt="ci_process_31.jpg" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/ci_process_31.jpg" width="50%" /></a>
+
+      section
+        h2 wercker
+        <a href="http://wercker.com/"><img alt="wercker" src="https://s3-ap-northeast-1.amazonaws.com/my-tinygrab/wercker" width="100%" /></a>
 
       section
         h2 CI on wercker
@@ -229,6 +265,14 @@ html
 
       section
         h2 serverspec (rspec spec/*)
+
+      section
+        h2 To be Growth Hacker
+        h3 「レシピを作って、調理したら、味見をする」
+        p (「codeを書いて、buildしたら、testする」)
+        h3 というCI Processをwerckerで自動化し、
+        h3 Gitリポジトリを共有するチームメンバーと
+        h3 hipchatで情報共有を進化させよう
 
       section
         h1 Thank you.
